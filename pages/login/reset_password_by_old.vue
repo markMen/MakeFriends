@@ -1,0 +1,293 @@
+<template>
+    <view class="pp">
+        <view class="">
+            <div class="cols">
+
+<!--                <view class="rows pt-lg">
+                    <view class="text-df text-color-3 form-text-left">手机号: </view>
+                    <input data-key="phone" @input="onInput" placeholder-class=" text-color-9" class="text-df pl"
+                        placeholder="请输入手机号" :value="model.phone" disabled="true"></input>
+                </view>
+
+                <view class="rows pt-lg">
+                    <view class="text-df text-color-3 form-text-left ">验证码: </view>
+                    <view class="full-width box ">
+                        <input data-key="code" @input="onInput" placeholder-class=" text-color-9" class="text-df pl input-text-code"
+                            placeholder="请输入验证码"></input>
+                        <tui-button size="mini" :type="type" shape="circle" :plain="true" :disabled="disabled" @click="btnSend">{{btnText}}</tui-button>
+                    </view>
+                </view> -->
+				
+				<view class="rows pt-lg">
+				    <view class="text-df text-color-3 form-text-left">用户名: </view>
+				    <input  data-key="username" @input="onInput" placeholder-class=" text-color-9" class="text-df pl"
+				        placeholder="请输入用户名" v-model="model.username"></input>
+				</view>
+				
+				<view class="rows pt-lg">
+				    <view class="text-df text-color-3 form-text-left">旧密码: </view>
+				    <input password="true" data-key="old_password" @input="onInput" placeholder-class=" text-color-9" class="text-df pl"
+				        placeholder="请输入密码"></input>
+				</view>
+				
+				
+
+                <view class="rows pt-lg">
+                    <view class="text-df text-color-3 form-text-left">填写密码: </view>
+                    <input password="true" data-key="password" @input="onInput" placeholder-class=" text-color-9" class="text-df pl"
+                        placeholder="请输入密码"></input>
+                </view>
+
+                <view class="rows pt-lg">
+                    <view class="text-df text-color-3 form-text-left">确认密码: </view>
+                    <input password="true" data-key="again_password" @input="onInput" placeholder-class=" text-color-9"
+                        class="text-df pl" placeholder="确认密码"></input>
+                </view>
+
+
+                <view class="rows pt-lg">
+                    <view class="text-df text-color-3 form-text-left"></view>
+                    <view class="rows text-sm">
+                        <checkbox-group @change="checkboChangeInterface">
+                            <label class="checkbox">
+                                <checkbox value="1" /><text>同意</text>
+                            </label>
+                        </checkbox-group>
+						<text class="tui-protocol-red" @tap="protocol">《用户协议》</text>
+						<text class="tui-protocol-red" @tap="privacy_policy">《隐私政策》</text>
+						<!-- <text @tap="onMianze" class="tui-protocol-red">《免责声明与条约》</text> -->
+                    </view>
+                </view>
+
+                <view class="rows pt-lg">
+
+                </view>
+
+                <view class="rows pt-lg">
+                    <button class="btn-main btn-block" @tap="onRefister">修改密码</button>
+                </view>
+            </div>
+        </view>
+
+
+    </view>
+</template>
+
+<script>
+    const util = require('../../utils/util.js')
+
+    import tuiIcon from "@/components/icon/icon"
+    import tuiButton from "@/components/button/button"
+    export default {
+        components: {
+            tuiIcon,
+            tuiButton
+        },
+        data() {
+            return {
+                model: {
+                    // username: '',
+                    company_name: '',
+                    company_id: '',
+                    company_legal: '',
+
+                    phone: '',
+                    code: '',
+                    username: '',
+                    password: '',
+                    again_password: '',
+					old_password: '',
+                    type: '',
+                    interface: '0',
+                },
+                company_img: ['/static/image/icon_company.png'],
+                company_def: '/static/image/icon_company.png',
+
+                disabled: false,
+                btnText: "获取验证码",
+                mobile: "",
+                type: "main",
+
+            }
+        },
+        methods: {
+            onInput(e) {
+                this.model[this.app.ed(e).key] = this.app.ev(e)
+            },
+            onType(e) {
+                this.model['type'] = this.app.ev(e)
+                this.model['price'] = this.model['type'] * 598
+            },
+            onRefister() {
+
+                // if (this.app.isEmpty(this.model.phone)) {
+                //     this.app.toast('请输入手机号')
+                //     return
+                // }
+
+                // if (!util.isMobile(this.model.phone)) {
+                //     this.app.toast('请输入正确的手机号码');
+                //     return
+                // }
+
+                // if (this.app.isEmpty(this.model.code)) {
+                //     this.app.toast('请输入验证码')
+                //     return
+                // }
+
+				if (this.app.isEmpty(this.model.username)) {
+                    this.app.toast('请输入密码')
+                    return
+                }
+				
+				if (this.app.isEmpty(this.model.old_password)) {
+                    this.app.toast('请输入密码')
+                    return
+                }
+				
+                if (this.app.isEmpty(this.model.password)) {
+                    this.app.toast('请输入密码')
+                    return
+                }
+                if (this.model.password != this.model.again_password) {
+                    this.app.toast('两次输入密码不一致')
+                    return
+                }
+                
+                if (this.model.interface != '1') {
+                    this.app.toast('请同意协议')
+                    return
+                }
+                
+
+
+
+/*                this.app.uploadFilesHtml('api/login/upload', this.company_img, uploadFiles => { //上传完成后
+                    //this.app.msg('', this.app.toJson(this.model))
+                    this.app.postHtml('api/login/register_phone', {
+                        ...this.model,
+                        company_img: uploadFiles[0].saveName,
+                    }, json => {
+                        if (json.code == '0') {
+                            this.app.goc('/pages/login/register_finish')
+                        } else {
+                            this.app.msgSys(json.data)
+                        }
+                    })
+                }) */
+                
+                
+                this.app.postHtml('api/login/reset_password_old', {
+                    ...this.model,
+                }, json => {
+                    if (json.code == '0') {
+						this.app.toast('修改成功')
+						setTimeout(()=> {
+							this.app.goc('/pages/login/login')
+						}, 1000)
+                    } else {
+                        this.app.msgSys(json.data)
+                    }
+                })
+
+
+
+            },
+            onAddImg() {
+                this.app.chooseImage(fs => {
+                    this.company_img = fs
+                    
+                    this.app.uploadFilesHtml('api/login/upload_file_company', this.company_img, jsons => { //上传完成后
+                        let json = jsons[0]
+                        this.model.company_img = json.file.saveName          
+                        this.model.company_json = json.company
+                         
+                        this.model.company_name = json.company.company_name                        
+                        this.model.company_id = json.company.company_id                        
+                        this.model.company_legal = json.company.company_legal                        
+                    })
+                    
+                }, 1)
+            },
+            previewImage(e) {
+                this.app.previewImage(e)
+            },
+            doLoop: function(seconds) {
+                //let code = this.getRandom(6);
+                //this.tui.toast('您本次的验证码是：' + code, 5000);
+                seconds = seconds ? seconds : 60;
+                this.btnText = seconds + "s后获取";
+                // this.code = code
+                let countdown = setInterval(() => {
+                    if (seconds > 0) {
+                        this.btnText = seconds + "s后获取"
+                            --seconds;
+                    } else {
+                        this.btnText = "获取验证码";
+                        this.disabled = false;
+                        this.type = "primary";
+                        clearInterval(countdown);
+                    }
+                }, 1000);
+            },
+            btnSend: function() {
+                if (util.isNullOrEmpty(this.model.phone)) {
+                    this.app.toast('请输入手机号码');
+                    return
+                } else if (!util.isMobile(this.model.phone)) {
+                    this.app.toast('请输入正确的手机号码');
+                    return
+                }
+                this.disabled = true;
+                this.btnText = "请稍候...";
+                this.type = "gray"
+
+
+                this.app.postHtml('api/login/login_send_code', {
+                    phone: this.model.phone
+                }, json => {
+                    if (json.code == '0') {
+                        this.code = json.data.code
+                        //this.app.toast(this.code + '')
+
+                        this.doLoop(60)
+
+                    } else {
+                        this.app.toast(json.data)
+                    }
+                })
+            },
+            radioChangeType(e) {
+                this.model['type'] = this.app.ev(e)
+            },
+            checkboChangeInterface(e) {
+                this.model['interface'] = this.app.ev(e)
+            },
+			onMianze(e) {
+			    this.app.go('/pages/login/editor', {tag: 'disclaimer_treaty'})
+			},
+			protocol: function() {
+				this.app.go('/pages/login/editor', {tag: 'user_agreement'})
+			},
+			privacy_policy: function() {
+				this.app.go('/pages/login/editor', {tag: 'privacy_policy'})
+			},
+        },
+        onLoad() {
+            this.app.setTitle('重置密码')
+			
+			// this.app.post('api/user/info', {}, json => {
+			// 	this.model.phone = json.phone
+			// 	this.model.username = json.username
+			// })
+			
+        },
+    }
+</script>
+
+<style>
+    .input-text-code {
+        width: 200rpx;
+        ;
+    }
+</style>

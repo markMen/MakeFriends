@@ -1,0 +1,207 @@
+{
+    "name" : "遇见良人",
+    "appid" : "__UNI__825E718",
+    "description" : "遇见良人",
+    "versionName" : "1.2.6",
+    "versionCode" : 126,
+    "transformPx" : false,
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "compatible" : {
+            "ignoreVersion" : true
+        },
+        "usingComponents" : true,
+        "nvueCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        /* 模块配置 */
+        "modules" : {
+            "OAuth" : {},
+            "VideoPlayer" : {},
+            "Payment" : {},
+            "Maps" : {}
+        },
+        /* 应用发布信息 */
+        "distribute" : {
+            /* android打包配置 */
+            "android" : {
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.LOCATION_HARDWARE\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ],
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a", "x86" ],
+                "permissionExternalStorage" : {
+                    "request" : "none"
+                }
+            },
+            /* ios打包配置 */
+            "ios" : {
+                "privacyDescription" : {
+                    "NSPhotoLibraryUsageDescription" : "读取相册用来发送图片信息",
+                    "NSPhotoLibraryAddUsageDescription" : "写入相册用来保存图片",
+                    "NSCameraUsageDescription" : "开启摄像头用来拍照图片然后使用该图片发送图片信息",
+                    "NSMicrophoneUsageDescription" : "使用麦克风进行录音用来发送语音消息",
+                    "NSLocationWhenInUseUsageDescription" : "使用当前位置用来发送位置信息",
+                    "NSLocationAlwaysAndWhenInUseUsageDescription" : "使用当前位置用来发送位置信息",
+                    "NSAppleMusicUsageDescription" : "使用媒体资料库用来发送附件消息"
+                },
+                "dSYMs" : false
+            },
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "payment" : {
+                    "weixin" : {
+                        "appid" : "wx9cc9d479c9642966",
+                        "UniversalLinks" : "https://www.xingkewang.com/app/",
+                        "__platform__" : [ "ios", "android" ]
+                    },
+                    "alipay" : {
+                        "__platform__" : [ "ios", "android" ]
+                    },
+                    "appleiap" : {}
+                },
+                "oauth" : {
+                    "weixin" : {
+                        "appid" : "wx9cc9d479c9642966",
+                        "appsecret" : "c18833a2205b84c7bae29d94a7264037",
+                        "UniversalLinks" : "https://www.xingkewang.com/app/"
+                    }
+                },
+                "ad" : {},
+                "share" : {},
+                "maps" : {
+                    "amap" : {
+                        "appkey_ios" : "b489e833bb380022e39d8368fd036aa7",
+                        "appkey_android" : "69b456f3050dc96dc23f29faa3182863"
+                    }
+                }
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "unpackage/res/icons/72x72.png",
+                    "xhdpi" : "unpackage/res/icons/96x96.png",
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                },
+                "ios" : {
+                    "appstore" : "unpackage/res/icons/1024x1024.png",
+                    "ipad" : {
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
+                    },
+                    "iphone" : {
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
+                    }
+                }
+            },
+            "splashscreen" : {
+                "androidStyle" : "common",
+                "useOriginalMsgbox" : true,
+                "iosStyle" : "common",
+                "ios" : {
+                    "iphone" : {
+                        "portrait-896h@3x" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "landscape-896h@3x" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "portrait-896h@2x" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "landscape-896h@2x" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "iphonex" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "iphonexl" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "retina55" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "retina55l" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "retina47" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "retina47l" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "retina40" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "retina40l" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "retina35" : "D:/NEW/uniapp/logo/slive_qidongtu.png"
+                    },
+                    "ipad" : {
+                        "portrait-1366h@2x" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "landscape-1366h@2x" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "portrait-1194h@2x" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "landscape-1194h@2x" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "portrait-1112h@2x" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "landscape-1112h@2x" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "portrait-retina7" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "landscape-retina7" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "portrait7" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                        "landscape7" : "D:/NEW/uniapp/logo/slive_qidongtu.png"
+                    }
+                },
+                "android" : {
+                    "hdpi" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                    "xhdpi" : "D:/NEW/uniapp/logo/slive_qidongtu.png",
+                    "xxhdpi" : "D:/NEW/uniapp/logo/slive_qidongtu.png"
+                }
+            }
+        }
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : false
+        },
+        "usingComponents" : true
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    },
+    "h5" : {
+        "title" : "遇见良人",
+        "domain" : "mycar.tjsgkj.com",
+        "router" : {
+            "base" : "/h5/",
+            "mode" : "hash"
+        }
+    }
+}

@@ -1,0 +1,592 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/love/love",
+			"style": {
+				"enablePullDownRefresh": true,
+				"titleNView": false, // 设置默认导航栏隐藏
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏  
+				}
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/index/launch/launch",
+			"style": {}
+		}, {
+			"path": "pages/friend/friend",
+			"style": {
+				"navigationBarTitleText": "通讯录",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/message/message",
+			"style": {
+				"enablePullDownRefresh": true,
+				"navigationBarTitleText": "通讯录"
+			}
+		}, {
+			"path": "pages/me/me",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": true
+				}
+		}, {
+			"path": "pages/message/chat",
+			"style": {}
+		}, {
+			"path": "pages/me/me_edit",
+			"style": {}
+		}, {
+			"path": "pages/me/user_info",
+			"style": {}
+		}, {
+			"path": "pages/error/error",
+			"style": {}
+		}, {
+			"path": "pages/index/product/product",
+			"style": {}
+		}, {
+			"path": "pages/index/sale/sale",
+			"style": {}
+		}, {
+			"path": "pages/index/product/product_add",
+			"style": {}
+		}, {
+			"path": "pages/index/sale/sale_add",
+			"style": {}
+		}, {
+			"path": "pages/index/product/product_list",
+			"style": {}
+		}, {
+			"path": "pages/index/sale/sale_list",
+			"style": {}
+		}, {
+			"path": "pages/me/me_order/me_order",
+			"style": {
+				"navigationBarTitleText": "我购买的订单"
+			}
+		}, {
+			"path": "pages/me/me_order/me_order_detail",
+			"style": {}
+		}, {
+			"path": "pages/index/detail/detail",
+			"style": {
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/index/address/address",
+			"style": {}
+		}, {
+			"path": "pages/index/address/address_add",
+			"style": {}
+		}, {
+			"path": "pages/index/address/address_edit",
+			"style": {}
+		}, {
+			"path": "pages/index/submit_order/submit_order",
+			"style": {}
+		}, {
+			"path": "pages/index/submit_order/pay_finish",
+			"style": {}
+		}, {
+			"path": "pages/me/me_order/me_order_sale",
+			"style": {
+				"navigationBarTitleText": "我售出的订单"
+			}
+		}, {
+			"path": "pages/message/video",
+			"style": {
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "保存",
+							"fontSize": "14px",
+							"float": "right"
+						}]
+					}
+				}
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {}
+		}, {
+			"path": "pages/login/about",
+			"style": {}
+		}, {
+			"path": "pages/login/register",
+			"style": {}
+		}, {
+			"path": "pages/login/login_finish",
+			"style": {}
+		}, {
+			"path": "pages/login/register_finish",
+			"style": {}
+		}, {
+			"path": "pages/index/readme/readme",
+			"style": {}
+		}, {
+			"path": "pages/friend/verify",
+			"style": {}
+		}, {
+			"path": "pages/friend/me_follow",
+			"style": {}
+		}, {
+			"path": "pages/friend/follow_me",
+			"style": {}
+		}, {
+			"path": "pages/index/submit_order/user_order",
+			"style": {}
+		}, {
+			"path": "pages/index/submit_order/order_finish",
+			"style": {}
+		}, {
+			"path": "pages/index/detail/detail_product",
+			"style": {}
+		}, {
+			"path": "pages/message/message_all",
+			"style": {}
+		}, {
+			"path": "pages/login/login_check",
+			"style": {}
+		}, {
+			"path": "pages/login/reset_password",
+			"style": {}
+		}, {
+			"path": "pages/index/sale/index",
+			"style": {
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/index/product/index",
+			"style": {
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/me/user_img",
+			"style": {}
+		}, {
+			"path": "pages/me/server",
+			"style": {}
+		}, {
+			"path": "pages/me/about",
+			"style": {}
+		}, {
+			"path": "pages/me/me_order/me_order_detail",
+			"style": {}
+		}, {
+			"path": "pages/me/me_order/me_order_detail_sale",
+			"style": {}
+		}, {
+			"path": "pages/me/user_product_img",
+			"style": {}
+		}, {
+			"path": "pages/plus/index",
+			"style": {}
+		}, {
+			"path": "pages/me/product/me_product_list",
+			"style": {}
+		}, {
+			"path": "pages/me/product/me_add_product",
+			"style": {}
+		}
+
+		, {
+			"path": "pages/message/circle",
+			"style": {
+				"navigationBarTitleText": "商品中心",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/plus/plus",
+			"style": {}
+		}, {
+			"path": "pages/login/logout",
+			"style": {}
+		}, {
+			"path": "pages/me/server/server_list",
+			"style": {}
+		}, {
+			"path": "pages/index/detail/report",
+			"style": {}
+		}, {
+			"path": "pages/me/me_del",
+			"style": {}
+		}, {
+			"path": "pages/me/me_del_ing",
+			"style": {}
+		}, {
+			"path": "pages/login/login_check_no",
+			"style": {}
+		}, {
+			"path": "pages/login/edit_register",
+			"style": {}
+		}
+
+		, {
+			"path": "pages/me/me_edit/me_edit",
+			"style": {}
+		}, {
+			"path": "pages/me/me_edit/me_edit_ali",
+			"style": {}
+		}, {
+			"path": "pages/me/me_edit/me_edit_name",
+			"style": {}
+		}, {
+			"path": "pages/login/editor",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/me/product/server_add_product",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/submit_order/apple_pay",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/plus/plus_test",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/message/chat_back",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/login/login_check_loading",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/login/editor_task",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/me/task/task_log",
+			"style": {
+				"navigationBarTitleText": "历史公告",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/comment/comment",
+			"style": {
+				"navigationBarTitleText": "评论列表",
+				"enablePullDownRefresh": true
+			}
+
+		}, {
+			"path": "pages/comment/comment_input",
+			"style": {
+				"navigationBarTitleText": "评论",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/friend/friend_back",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+
+		, {
+			"path": "pages/friend/friend_back_view",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+
+		, {
+			"path": "pages/message/chat",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/message/circle_back",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/me/wx/wx_user_info",
+			"style": {
+				"navigationBarTitleText": "绑定微信",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/userstate/lock",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/login/register_back",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/me/me_edit/me_edit_info",
+			"style": {
+				"navigationBarTitleText": "商家认证",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/me/setting/setting",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/login/reset_password_all",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/test",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/other/web",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/login/register_username",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/login/reset_password_by_old",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/chat_group/group_list",
+			"style": {
+				"navigationBarTitleText": "群聊",
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 100,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "新建",
+							"fontSize": "30rpx",
+							"color": "#28a745",
+							"width": "auto" // 防止按钮显示不全
+						}]
+					}
+				}
+			}
+
+		}, {
+			"path": "pages/chat_group/group_add",
+			"style": {
+				"navigationBarTitleText": "选择好友",
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 100,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "完成",
+							"fontSize": "30rpx",
+							"color": "#28a745",
+							"width": "auto" // 防止按钮显示不全
+						}]
+					}
+				}
+			}
+		}, {
+			"path": "pages/chat_group/chat_group",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 100,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "设置",
+							"fontSize": "30rpx",
+							"color": "#28a745",
+							"width": "auto" // 防止按钮显示不全
+						}]
+					}
+				}
+			}
+
+		}, {
+			"path": "pages/chat_group/setting",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/chat_group/group_user_info",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/chat_group/edit_nickname/edit_nickname",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/me/me_edit/me_edit_phone",
+			"style": {
+				"navigationBarTitleText": "手机号",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/windows/rightWindow",
+			"style": {
+				"width": "calc(100vw - 390px)" // 页面宽度（390px是左边固定宽度）
+			},
+			"matchMedia": {
+				"minWidth": 580 //生效条件，当窗口宽度大于580px时分屏显示
+			}
+
+
+		}, {
+			"path": "pages/login/register_finish_info",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/wallet/wallet",
+			"style": {
+				"navigationBarTitleText": "钱包",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/wallet/cash_out_price",
+			"style": {
+				"navigationBarTitleText": "提现",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/wallet/log_cash",
+			"style": {
+				"navigationBarTitleText": "提现记录",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/wallet/log_pay",
+			"style": {
+				"navigationBarTitleText": "充值记录",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/plus/plus_coin",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/love/love_back",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "遇见良人",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#666666",
+		"selectedColor": "#fa5151",
+		"borderStyle": "black",
+		"backgroundColor": "#F8F8F8",
+		"list": [{
+				"pagePath": "pages/love/love",
+				"iconPath": "static/navi/icon_world_df.png",
+				"selectedIconPath": "static/navi/icon_world_ed.png",
+				"text": "星球"
+			},
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/navi/icon_msg_df.png",
+				"selectedIconPath": "static/navi/icon_msg_ed.png",
+				"text": "消息"
+			},
+			{
+				"pagePath": "pages/message/message",
+				"iconPath": "static/navi/icon_contact_df.png",
+				"selectedIconPath": "static/navi/icon_contact_ed.png",
+				"text": "通讯录"
+			},
+			{
+				"pagePath": "pages/me/me",
+				"iconPath": "static/navi/icon_me_df.png",
+				"selectedIconPath": "static/navi/icon_me_ed.png",
+				"text": "我"
+			}
+		]
+	}
+
+}
